@@ -23,7 +23,6 @@ const roomSchema= mongoosse.Schema({
   id_user: {
     type: mongoosse.SchemaTypes.ObjectId,
     ref: "manager",
-    unique: true
   },
   isFree: {
     type: Number,

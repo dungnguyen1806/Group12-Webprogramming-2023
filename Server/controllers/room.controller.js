@@ -38,7 +38,7 @@ module.exports= {
   },
   getRoomByUser: async (req, res, next)=>{
     let idUser= req.params.id;
-    let room= await roomModel.findOne({id_user: idUser}).populate("id_location").populate("id_user");
+    let room= await roomModel.find({id_user: idUser}).populate("id_location").populate("id_user");
     return res.status(200).json(room);
   }
 }
