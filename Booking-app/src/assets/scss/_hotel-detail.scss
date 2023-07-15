@@ -1,0 +1,138 @@
+.hotel-detail {
+    padding: 30px 0;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &-left {
+            & h2 {
+                text-transform: capitalize;
+            }
+
+            .hotel-address {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin: 10px 0;
+
+                & span {
+                    color: var(--text-dark);
+                    font-size: 13px;
+                }
+            }
+
+            .hotel-distance {
+                color: #85f3ed;
+                font-size: 14px;
+                margin-top: 5px;
+            }
+
+            .hotel-price {
+                color: var(--main-color);
+                font-size: 14px;
+                font-weight: 600;
+                margin: 10px 0;
+            }
+        }
+    }
+
+    .book-now {
+        border: none;
+        background-color: var(--third-color);
+        color: var(--text-white);
+        font-weight: bold;
+        font-size: 14px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .hotel-image-item {
+        width: 250px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    &__bottom {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &-text {
+            flex: 3;
+
+            & p {
+                font-size: 14px;
+                color: var(--text-dark);
+                margin-top: 15px;
+            }
+
+            & p:last-child {
+                margin-right: 50px;
+            }
+        }
+
+        &-price {
+            flex: 1;
+            background-color: #ebf3ff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            & h3 {
+                color: var(--text-dark);
+            }
+
+            & span {
+                display: inline-block;
+                margin: 10px 0;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hotel-detail {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .hotel-price {
+            width: 95%;
+        }
+
+        .detail-img {
+            width: 100%;
+
+            & img {
+                width: 150px !important;
+                height: 150px !important;
+            }
+        }
+
+        &__bottom {
+            flex-direction: column;
+
+            .desc-detail-hotel {
+                display: none;
+            }
+
+            &-price {
+                width: 100%;
+                gap: 5px;
+                margin-top: 20px;
+            }
+
+            .book-now {
+                margin-top: 5px;
+            }
+        }
+        
+        .book-now1 {
+            display: none;
+        }
+    }
+}

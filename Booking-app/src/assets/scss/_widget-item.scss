@@ -1,0 +1,61 @@
+.list-widget {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+        padding: 15px 10px;
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+        border-radius: 10px;
+
+        &-left,
+        &-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .widget-title {
+                font-weight: bold;
+                font-size: 16px;
+                color: var(--text-gray);
+            }
+
+            .widget-counter {
+                font-size: 28px;
+                font-weight: 500;
+                margin: 10px 0;
+            }
+
+            .widget-link {
+                width: max-content;
+                font-size: 14px;
+                border-bottom: 1px solid var(--text-dark);
+                cursor: pointer;
+            }
+
+            .widget-percent {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+
+                &.positive {
+                    color: green;
+                }
+
+                &.negative {
+                    color: red;
+                }
+            }
+
+            .widget-icon {
+                font-size: 24px;
+                padding: 5px;
+                border-radius: 5px;
+                align-self: flex-end;
+            }
+        }
+    }
+}

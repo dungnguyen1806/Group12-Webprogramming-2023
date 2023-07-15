@@ -1,0 +1,120 @@
+.card-item {
+    width: 320px;
+    position: relative;
+    margin-bottom: 10px;
+
+    &__img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    &__props {
+        position: absolute;
+        color: var(--text-white);
+        bottom: 20px;
+        left: 20px;
+
+        & h2 {
+            text-transform: capitalize;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.card-list-property {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    .card-item-property {
+        flex: 1;
+        overflow: hidden;
+        cursor: pointer;
+
+        & img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        &__title {
+            & h1{
+                font-size: 18px;
+                color: var(--text-dark);
+                text-transform: capitalize;
+            }
+            
+            & h2{
+                font-size: 14px;
+                font-weight: 300;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+.card-item-guest {
+    width: 250px;
+    margin: 10px 0;
+
+    & img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    &__name {
+        color: var(--text-dark);
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+    &__city {
+        font-weight: 300;
+        font-size: 12px;
+        margin: 5px 0;
+    }
+
+    &__price {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    &__rating {
+        margin-top: 5px;
+
+        & button {
+            background-color: var(--main-color);
+            color: var(--text-white);
+            border: none;
+            padding: 3px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        & span {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .card-list-property {
+        flex-direction: column;
+
+        .card-item-property {
+
+            & img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+}

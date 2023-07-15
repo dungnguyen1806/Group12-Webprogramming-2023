@@ -1,0 +1,60 @@
+.booking-info {
+    background-color: var(--bg-white);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+
+    &__detail {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 15px;
+
+        .checkin {
+            border-right: 1px solid #ccc;
+            padding-right: 10px;
+        }
+
+        .checkout {
+            padding-left: 10px;
+        }
+
+        .bi-title {
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+        .from-until {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        h6 {
+            margin: 5px 0;
+        }
+    }
+
+    .stay-date {
+        margin-top: 15px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .your-select {
+        margin-top: 5px;
+        color: var(--text-gray);
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .booking-row {
+        flex-direction: column-reverse;
+    }
+    .booking-info {
+        margin: 10px;
+        width: calc(100% - 20px);
+    }
+    .MuiList-root {
+        width: 100%;
+    }
+}

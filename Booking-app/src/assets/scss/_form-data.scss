@@ -1,0 +1,27 @@
+.form-data {
+    width: 100%;
+}
+.form-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -15px 24px;
+    text-align: left;
+
+    &__name {
+        flex-basis: 20%;
+        margin: 0px 0px 8px;
+        padding: 0px 15px;
+        text-align: right;
+        font-size: 15px;
+        
+        & span {
+            color: red !important;
+        }
+    }
+
+    &__input {
+        flex-basis: 30%;
+        margin-top: -16px;
+        margin-left: 16px;
+    }
+}
