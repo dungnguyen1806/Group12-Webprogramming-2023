@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom'
 import roomApi from '../../../api/roomApi';
-import { calDiffDates } from '../../admin/utils/calDiffDates';
+import { calDiffDates } from '../../../utils/calDiffDates';
 import Footer from '../components/footer/Footer'
 import Header from '../components/header/Header'
 

@@ -22,7 +22,7 @@ router
   .patch(asyncHandle(updateRoom))
   .delete(asyncHandle(deleteRoom))  
 router
-  .route("/search/:key")
+  .route("/search/:key/:price1/:price2")
   .get(asyncHandle(getRoomByLocationSearch));
 router
   .route("/user/:id")

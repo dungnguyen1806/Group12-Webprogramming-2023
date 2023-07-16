@@ -14,7 +14,7 @@ import { SelectField } from '../../../components/form-field/SelectField'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import roomApi from '../../../api/roomApi';
-import { calDiffDates } from '../../admin/utils/calDiffDates';
+import { calDiffDates } from '../../../utils/calDiffDates';
 
 export default function Booking(props) {
     const location = useLocation();

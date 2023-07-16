@@ -21,10 +21,10 @@ export default function UserSearch(props) {
 
     const handleSearch = useCallback(async () => {
         setIsLoading(true);
-        const response = await roomApi.searchByDestination(destination);
+        const response = await roomApi.searchByDestination(destination, min, max);
         setIsLoading(false);
         setListSearchData(response);
-    }, [destination])
+    }, [destination, min ,max])
 
     useEffect(() => {
         handleSearch();

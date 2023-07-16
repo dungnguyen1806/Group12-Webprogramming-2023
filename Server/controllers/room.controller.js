@@ -29,7 +29,8 @@ module.exports= {
   },
   getRoomByLocationSearch: async (req, res, next)=>{
     let str= req.params.key;
-    let rooms= await roomModel.find().populate("id_location");
+    const {price1, price2} = req.params;
+    let rooms= await roomModel.find({cost_per_day: {$gte: Number(price1), $lte: Number(price2)}}).populate("id_location");
     let rooms2= {};
     rooms2= rooms.filter((ele)=>{
       return ele?.id_location?.name_location?.includes(str);
