@@ -15,14 +15,16 @@ const roomSchema= mongoosse.Schema({
   other_information: {
     type: String
   },
+  image: {
+    type: String
+  },
   id_location: {
     type: mongoosse.SchemaTypes.ObjectId,
-    ref: "destination",
-    
+    ref: "destination"
   },
   id_user: {
     type: mongoosse.SchemaTypes.ObjectId,
-    ref: "manager",
+    ref: "manager"
   },
   isFree: {
     type: Number,

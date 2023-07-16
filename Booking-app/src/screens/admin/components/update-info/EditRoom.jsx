@@ -126,11 +126,13 @@ function EditRoom() {
                                                 name='type_of_room'
                                                 control={control}
                                                 options={[
-                                                    { id: 'hotel', name: 'Hotels' },
-                                                    { id: 'apartment', name: 'Apartments' },
-                                                    { id: 'resort', name: 'Resorts' },
-                                                    { id: 'villa', name: 'Villas' },
-                                                    { id: 'cabin', name: 'Cabins' },
+                                                    { id: 'Grand Suite', name: 'Grand Suite' },
+                                                    { id: 'Deluxe Twin', name: 'Deluxe Twin' },
+                                                    { id: 'Superior Triple', name: 'Superior Triple' },
+                                                    { id: 'Executive Suite', name: 'Executive Suite' },
+                                                    { id: 'Premium Triple', name: 'Premium Triple' },
+                                                    { id: 'Presidential Suite', name: 'Presidential Suite' },
+                                                    { id: 'Apartment', name: 'Apartment' }
                                                 ]}
                                             />
                                         </div>

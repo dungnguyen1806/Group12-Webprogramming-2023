@@ -64,14 +64,10 @@ export default function AddNewRoom() {
     })
 
     const onsubmit = async (value) => {
-        const response = await roomApi.create(value);
-        if (response?.statusCode === 400) {
-            alert("This room already has a manager, please choose another room.");
-        } else {
-            alert('Add room successfully!');
-            dispatch(getAllRoom());
-            navigate('/admin/homestays');
-        }
+        await roomApi.create(value);
+        alert('Add room successfully!');
+        dispatch(getAllRoom());
+        navigate('/admin/homestays');
     }
     
     return (
@@ -103,11 +99,13 @@ export default function AddNewRoom() {
                         name='type_of_room'
                         control={control}
                         options={[
-                            { id: 'hotel', name: 'Hotels' },
-                            { id: 'apartment', name: 'Apartments' },
-                            { id: 'resort', name: 'Resorts' },
-                            { id: 'villa', name: 'Villas' },
-                            { id: 'cabin', name: 'Cabins' },
+                            { id: 'Grand Suite', name: 'Grand Suite' },
+                            { id: 'Deluxe Twin', name: 'Deluxe Twin' },
+                            { id: 'Superior Triple', name: 'Superior Triple' },
+                            { id: 'Executive Suite', name: 'Executive Suite' },
+                            { id: 'Premium Triple', name: 'Premium Triple' },
+                            { id: 'Presidential Suite', name: 'Presidential Suite' },
+                            { id: 'Apartment', name: 'Apartment' }
                         ]}
                     />
                 </div>
