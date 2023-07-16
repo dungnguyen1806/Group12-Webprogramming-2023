@@ -7,12 +7,11 @@ export default function SearchItem({ item }) {
             <img src={item?.image} alt="search-img"/>
             <div className='search-item__desc'>
                 <h1 className='desc-name'>{item?.type_of_room}</h1>
-                <span className="desc-distance">300m from center</span>
-                <span className="desc-taxi">Free airport taxi</span>
                 <span className="desc-subtitle">
-                    Studio Apartment with Air conditioning
+                    {item?.other_information}
                 </span>
-                <span className="desc-feature">Entire studio, 1 bathroom 21m<sup>2</sup> full bed</span>
+                <span className="desc-distance">300m from center</span>
+                <span className="desc-taxi">Free airport taxi</span>                
                 <span className="desc-cancel">Free cancellation</span>
                 <span className="desc-cancel-subtitle">
                     You can cancel later, so lock in this great price today!

@@ -45,7 +45,7 @@ export default function HotelDetail(props) {
                             Excellent location - 300m from center
                         </p>
                         <p className="hotel-price">
-                            Book a stay over ${homestay?.cost_per_day} at this property and get a
+                            Book a stay over ${homestay?.cost_per_day * numNight} at this property and get a
                             free airport taxi
                         </p>
                     </div>                    

@@ -95,7 +95,7 @@ export default function AddNewRoom() {
                 </div>
             </div>
             <div className="form-item">
-                <p className="form-item__name">Manger room <span>*</span></p>
+                <p className="form-item__name">Manager room <span>*</span></p>
                 <div className='form-item__input'>
                     <SelectField
                         name='id_user'
