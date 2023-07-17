@@ -15,7 +15,16 @@ const WidgetItem = ({ type, total }) => {
 
     const diff = 20;
 
-    const totalRevenue = [...statisticals].map(item => item?.total).reduce((prev, curr) => prev + curr, 0);
+    const dayDiff = (firstDate, secondDate) => {
+        const startDay = new Date(firstDate);
+        const endDay = new Date(secondDate);
+        const milis = startDay.getTime() - endDay.getTime();
+        const day = milis / (1000 * 3600 * 24);
+
+        return Math.round(Math.abs(day));
+    }
+
+    const totalRevenue = [...statisticals].map(item => item?.total* +dayDiff(item?.timeCome, item?.timeLeave)).reduce((prev, curr) => prev + curr, 0);
     
     switch (type) {
         case "user":
