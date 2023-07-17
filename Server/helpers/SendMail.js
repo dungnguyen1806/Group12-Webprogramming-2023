@@ -28,7 +28,7 @@ const sendMail = async (options) => {
   });
 
   const message = {
-    from: `Admin ${configuration.gmail.USER} from Homestay`,
+    from: `Admin ${configuration.gmail.USER} from Booking Hotel`,
     to: options.email,
     subject: options.subject,
     html: options.html,

@@ -79,7 +79,7 @@ export default function AddNewRoom() {
         await roomApi.create({...value, image});
         alert('Add room successfully!');
         dispatch(getAllRoom());
-        navigate('/admin/homestays');
+        navigate('/admin/rooms');
     }
     
     return (

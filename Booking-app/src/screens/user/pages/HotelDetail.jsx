@@ -10,7 +10,7 @@ import Header from '../components/header/Header'
 export default function HotelDetail(props) {
     const { id } = useParams();
     const navigate = useNavigate();
-    const [homestay, setHomestay] = useState(null);
+    const [room, setRoom] = useState(null);
     const numNight = calDiffDates(props.dates[0].startDate, props.dates[0].endDate);
 
     const photos = [
@@ -22,12 +22,12 @@ export default function HotelDetail(props) {
     ]
 
     useEffect(() => {
-        const getHomestay = async() => {
+        const getRoom = async() => {
             const response = await roomApi.getRoomById(id);
-            setHomestay(response);
+            setRoom(response);
         }
 
-        getHomestay();
+        getRoom();
     }, [id])
 
     return (
@@ -36,16 +36,16 @@ export default function HotelDetail(props) {
             <div className="container hotel-detail">
                 <div className="hotel-detail__top">
                     <div className="hotel-detail__top-left">
-                        <h2>{homestay?.type_of_room}</h2>
+                        <h2>{room?.type_of_room}</h2>
                         {/* <div className="hotel-address">
                             <LocationOn fontSize='18' />
-                            <span>{homestay?.address}</span>
+                            <span>{room?.address}</span>
                         </div> */}
                         <p className="hotel-distance">
                             Excellent location - 300m from center
                         </p>
                         <p className="hotel-price">
-                            Book a stay over ${homestay?.cost_per_day * numNight} at this property and get a
+                            Book a stay over ${room?.cost_per_day * numNight} at this property and get a
                             free airport taxi
                         </p>
                     </div>                    
@@ -61,7 +61,7 @@ export default function HotelDetail(props) {
                     <div className="hotel-detail__bottom-text">
                         <h3>Stay in the heart of city</h3>
                         <p className="desc-detail-hotel">
-                            {homestay?.other_information}
+                            {room?.other_information}
                         </p>
                     </div>
                     <div className="hotel-detail__bottom-price">
@@ -70,12 +70,12 @@ export default function HotelDetail(props) {
                             Highly rated by recent guests (9.0)
                         </span>
                         <p>
-                            <b style={{ fontSize: '22px'}}>${homestay?.cost_per_day * numNight}</b> 
+                            <b style={{ fontSize: '22px'}}>${room?.cost_per_day * numNight}</b> 
                             {" "}({numNight}{" "}nights)
                         </p>
                         <button
                             className='book-now'
-                            onClick={() => navigate('/booking', { state: { price: homestay?.cost_per_day, id_room: id }})}
+                            onClick={() => navigate('/booking', { state: { price: room?.cost_per_day, id_room: id }})}
                         >
                             Reserve or Book Now!
                         </button>

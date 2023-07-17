@@ -57,7 +57,7 @@ const DataTable = ({ columns, title, name }) => {
   //   { id: 5, user: 'Snow', email: 'min@gmail.com', age: 35, phone: '0245124155', status: 'passive' },
   // ];
 
-  // const homestayRows = [
+  // const roomRows = [
   //   {id: 1, destination: "HaNoi", roomId: 111, type: "Hotels", maxPeople: 5, price: 30, otherInfo: "Swimming pool"},
   //   {id: 2, destination: "TP.HCM", roomId: 245, type: "Villas", maxPeople: 10, price: 100, otherInfo: "Swimming pool"},
   //   {id: 3, destination: "HaNoi", roomId: 105, type: "Apartment", maxPeople: 3, price: 80, otherInfo: "Swimming pool"},

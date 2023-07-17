@@ -71,7 +71,7 @@ module.exports= {
     let option= {
       email: customer.email,
       subject: "THÔNG BÁO ĐẶT DỊCH VỤ THÀNH CÔNG",
-      html: `<h1>Xin chân trọng thông báo, quý khách đã đặt dịch vụ homestay thành công vào thời gian ${dateTime}. Để xác thực thông tin. Hãy nhập mã xác nhận sau ${otp}</h1>`
+      html: `<h1>Xin chân trọng thông báo, quý khách đã đặt dịch vụ room thành công vào thời gian ${dateTime}. Để xác thực thông tin. Hãy nhập mã xác nhận sau ${otp}</h1>`
     }
     await sendMail(option);
 

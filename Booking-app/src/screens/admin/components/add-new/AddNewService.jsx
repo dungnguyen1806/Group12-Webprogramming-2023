@@ -6,32 +6,32 @@ import InputField from '../../../../components/form-field/InputField'
 import { Box, Button, FormControl, FormHelperText, InputAdornment, OutlinedInput } from '@mui/material'
 import { ArrowBack } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
-import { SelectField } from '../../../../components/form-field/SelectField'
-import { useSelector, useDispatch } from 'react-redux'
+//import { SelectField } from '../../../../components/form-field/SelectField'
+import { useDispatch } from 'react-redux'
 import serviceApi from '../../../../api/serviceApi'
 import { getAllService } from '../../../../redux/serviceSlice'
 
 export default function AddNewService() {
     const dispatch = useDispatch();
-    const { rooms } = useSelector(state => state.room);
+    // const { rooms } = useSelector(state => state.room);
     const navigate = useNavigate();
 
     const initialValues = {
         name_service: '',
         cost: 0,
-        id_room: '',
+        // id_room: '',
         more_detail: ''
     }
 
-    const selectRoom = [...rooms].map(item => {
-        return { id: item?._id, name: item?.type_of_room };
-    })
+    // const selectRoom = [...rooms].map(item => {
+    //     return { id: item?._id, name: item?.type_of_room };
+    // })
     
     const validationSchema = Yup.object().shape({
         name_service: Yup.string()
             .required("Service name is required."),
-        id_room: Yup.string()
-            .required("Room is required."),
+        // id_room: Yup.string()
+        //     .required("Room is required."),
         cost: Yup.number()
             .typeError("Cost must be a number.")
             .required("Cost is required.")
@@ -82,7 +82,7 @@ export default function AddNewService() {
                     />
                 </div>
             </div>
-            <div className="form-item">
+            {/* <div className="form-item">
                 <p className="form-item__name">Room <span>*</span></p>
                 <div className='form-item__input'>
                     <SelectField
@@ -91,7 +91,7 @@ export default function AddNewService() {
                         options={selectRoom}
                     />
                 </div>
-            </div>
+            </div> */}
             <div className="form-item">
                 <p className="form-item__name">Cost <span>*</span></p>
                 <div className='form-item__input'>

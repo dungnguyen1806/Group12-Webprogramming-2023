@@ -48,12 +48,12 @@ const WidgetItem = ({ type, total }) => {
                 amount: statisticals?.length
             };
             break;
-        case "homestay":
+        case "room":
             data = {
-                title: "HOMESTAYS",
+                title: "ROOMS",
                 isMoney: false,
-                name: "View all homestays",
-                link: "/admin/homestays",
+                name: "View all rooms",
+                link: "/admin/rooms",
                 icon: (
                     <AccountBalanceWalletOutlinedIcon
                         className="widget-icon"

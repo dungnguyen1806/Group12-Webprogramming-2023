@@ -128,23 +128,23 @@ export default function ListCustomer() {
                                             align='left'
                                             sx={{ fontWeight: 600, cursor: 'pointer', width: '130px' }}
                                         >
-                                            Homestay
+                                            Room
                                         </TableCell>
                                         <TableCell
                                             align='left'
-                                            sx={{ fontWeight: 600, cursor: 'pointer', width: '100px' }}
+                                            sx={{ fontWeight: 600, cursor: 'pointer', width: '50px' }}
                                         >
                                             Total
                                         </TableCell>
                                         <TableCell
                                             align='center'
-                                            sx={{ fontWeight: 600, width: '170px' }}
+                                            sx={{ fontWeight: 600, width: '150px' }}
                                         >
                                             Time come
                                         </TableCell>
                                         <TableCell
                                             align='center'
-                                            sx={{ fontWeight: 600, width: '170px' }}
+                                            sx={{ fontWeight: 600, width: '150px' }}
                                         >
                                             Time leave
                                         </TableCell>
@@ -216,7 +216,7 @@ export default function ListCustomer() {
                                                     <TableCell style={{ fontWeight: 'bold', fontSize: '20px' }} colSpan={4}>
                                                         Total revenue: {" "}$
                                                         {
-                                                            listCustomer?.map(item => item?.total)?.reduce((prev, cur) => (prev + cur), 0)
+                                                            listCustomer?.map(item => item?.total* +dayDiff(item?.timeCome, item?.timeLeave))?.reduce((prev, cur) => (prev + cur), 0)
                                                         }
                                                     </TableCell>
                                                 </TableRow>

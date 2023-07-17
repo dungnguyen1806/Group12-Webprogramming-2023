@@ -27,7 +27,7 @@ export default function SearchItem({ item }) {
                         <b style={{ fontSize: '22px'}}>${item?.cost_per_day}</b> night
                     </p>
                     <span className="detail-text__tax">Includes taxes and fees</span>
-                    <Link to={`/homestays/${item._id}`}>
+                    <Link to={`/rooms/${item._id}`}>
                         <button className="detail-text__btn">See availability</button>
                     </Link>
                 </div>

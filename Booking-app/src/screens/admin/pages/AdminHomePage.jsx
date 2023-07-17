@@ -53,7 +53,7 @@ function AdminHomePage() {
         <div className="list-widget">
           <WidgetItem type='user' />
           <WidgetItem type='order' />
-          <WidgetItem type='homestay' />
+          <WidgetItem type='room' />
           <WidgetItem type='total' total={totalRevenueByUser}/>
         </div>
         <div className="charts">

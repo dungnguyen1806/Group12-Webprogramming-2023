@@ -10,7 +10,7 @@ import CustomModal from '../../../components/custom-modal/CustomModal';
 import roomApi from '../../../api/roomApi';
 import { getAllRoom } from '../../../redux/roomSlice';
 
-export default function ListHomestayPage() {
+export default function ListRoomPage() {
     const dispatch = useDispatch();
     const user = useSelector(state => state.auth.user);
     const { rooms } = useSelector(state => state.room);
@@ -49,13 +49,13 @@ export default function ListHomestayPage() {
                 <Navbar />
                 <div className='data-table'>
                     <div className="data-table__title">
-                        <span>List Homestay</span>
+                        <span>List Room</span>
                         {
                             user?.role === 'admin' && <Link
-                                to='/admin/homestays/new-homestay'
+                                to='/admin/rooms/new-room'
                                 className="data-table__title-link"
                             >
-                                Add New Homestay
+                                Add New Room
                             </Link>
                         }
                     </div>
@@ -126,7 +126,7 @@ export default function ListHomestayPage() {
                                                 </TableCell>
                                                 <TableCell align='right' sx={{ display: 'flex', alignItems: 'center' }}>
                                                     <div className="cellAction">
-                                                        <Link to={`/admin/homestays/${item?._id}`} style={{ textDecoration: "none" }}>
+                                                        <Link to={`/admin/rooms/${item?._id}`} style={{ textDecoration: "none" }}>
                                                             <div className="viewButton">Update</div>
                                                         </Link>
                                                         <div
@@ -157,7 +157,7 @@ export default function ListHomestayPage() {
                                                     </TableCell>
                                                     <TableCell align='right'>
                                                         {item?._id ? <div className="cellAction">
-                                                            <Link to={`/admin/homestays/${item?._id}`} style={{ textDecoration: "none" }}>
+                                                            <Link to={`/admin/rooms/${item?._id}`} style={{ textDecoration: "none" }}>
                                                                 <div className="viewButton">Update</div>
                                                             </Link>
                                                         </div> : ''}
@@ -172,7 +172,7 @@ export default function ListHomestayPage() {
                                 <CustomModal
                                     open={openConfirmDelete}
                                     content={
-                                        <Typography variant='body1' component='div'>Do you want to delete this homestay?</Typography>
+                                        <Typography variant='body1' component='div'>Do you want to delete this room?</Typography>
                                     }
                                     actions={
                                         <Box width='100%' ml={2} mr={2} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>

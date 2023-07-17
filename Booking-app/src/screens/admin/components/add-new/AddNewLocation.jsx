@@ -35,7 +35,7 @@ export default function AddNewLocation() {
             await destinationApi.create(value);
             dispatch(getAllDestination());
             alert('Add destination successfully!');
-            navigate('/admin/homestays');
+            navigate('/admin/rooms');
         } catch (error) {
             alert('Error');
         }

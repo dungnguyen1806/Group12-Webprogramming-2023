@@ -74,7 +74,7 @@ function EditRoom() {
         await roomApi.update(room?._id, value);
         alert("Update room successfully!");
         dispatch(getAllRoom());
-        navigate('/admin/homestays');
+        navigate('/admin/rooms');
     };
 
     return (
@@ -96,7 +96,7 @@ function EditRoom() {
                             justifyContent: 'center',
                             cursor: 'pointer'
                         }}
-                        onClick={() => navigate('/admin/homestays')}
+                        onClick={() => navigate('/admin/rooms')}
                     >
                         <ArrowBack />
                     </Box>

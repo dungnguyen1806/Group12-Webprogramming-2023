@@ -56,10 +56,10 @@ export default function Sidebar() {
 
                         )
                     }
-                    <Link to="/admin/homestays" style={{ textDecoration: "none" }}>
+                    <Link to="/admin/rooms" style={{ textDecoration: "none" }}>
                         <li>
                             <StoreIcon className="icon" />
-                            <span>Homestays</span>
+                            <span>Rooms</span>
                         </li>
                     </Link>
                     <Link to="/admin/services" style={{ textDecoration: "none" }}>

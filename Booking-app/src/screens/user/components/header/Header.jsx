@@ -15,7 +15,7 @@ export default function Header({ type }) {
             destination,
         }
         dispatch(setSearchData(values));
-        navigate('/homestays', { state: values });
+        navigate('/rooms', { state: values });
     }
 
     return (

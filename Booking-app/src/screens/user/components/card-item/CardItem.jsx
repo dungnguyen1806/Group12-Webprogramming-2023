@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 export function CardItemFirst({ item, img }) {
     const navigate = useNavigate();
     const handleSearch = async () => {
-        navigate('/homestays',
+        navigate('/rooms',
             {
                 state: {
                     destination: item?.name_location,

@@ -11,11 +11,11 @@ import Booking from "./screens/user/pages/Booking";
 import ListUserPage from "./screens/admin/pages/ListUserPage";
 import { userColumns } from "./screens/admin/utils/data-table";
 import AddUserPage from "./screens/admin/pages/AddUserPage";
-import AddHomeStayPage from "./screens/admin/pages/AddHomeStayPage";
+import AddRoomPage from "./screens/admin/pages/AddRoomPage";
 import AddServicePage from "./screens/admin/pages/AddServicePage";
 import NotFound from "./components/404/NotFound";
 import AdminLogin from "./screens/admin/pages/AdminLogin";
-import ListHomestayPage from "./screens/admin/pages/ListHomestayPage";
+import ListRoomPage from "./screens/admin/pages/ListRoomPage";
 import ListServicePage from "./screens/admin/pages/ListServicePage";
 import ListCustomer from "./screens/admin/pages/ListCustomer";
 import ProtectedRoute from "./screens/admin/components/routing/ProtectedRoute";
@@ -39,8 +39,8 @@ function App() {
         <Routes>
           {/* user */}
           <Route path='/' element={<UserHomePage />} />
-          <Route path='/homestays' element={<UserSearch dates={dates} setDates={setDates} />} />
-          <Route path='/homestays/:id' element={<HotelDetail dates={dates} setDates={setDates} />} />
+          <Route path='/rooms' element={<UserSearch dates={dates} setDates={setDates} />} />
+          <Route path='/rooms/:id' element={<HotelDetail dates={dates} setDates={setDates} />} />
           <Route path='/booking' element={<Booking dates={dates} setDates={setDates} />} />
 
           {/* admin */}
@@ -84,23 +84,23 @@ function App() {
           />
 
           <Route
-            path='/admin/homestays'
+            path='/admin/rooms'
             element={
               <ProtectedRoute roles={["staff"]}>
-                <ListHomestayPage />
+                <ListRoomPage />
               </ProtectedRoute>
             }
           />
           <Route
-            path='/admin/homestays/new-homestay'
+            path='/admin/rooms/new-room'
             element={
               <ProtectedRoute>
-                <AddHomeStayPage />
+                <AddRoomPage />
               </ProtectedRoute>
             }
           />
           <Route
-            path='/admin/homestays/:id'
+            path='/admin/rooms/:id'
             element={
               <ProtectedRoute roles={["staff"]}>
                 <EditRoom />

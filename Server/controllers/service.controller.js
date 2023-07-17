@@ -13,10 +13,10 @@ module.exports= {
   },
   createServiceForRoom: async (req, res, next)=>{
     let {...body}= req.body;
-    let idRoom= body.id_room;
-    if (!idRoom){
-      throw new ErrorResponse(404, "Must provide id_room");
-    }
+    // let idRoom= body.id_room;
+    // if (!idRoom){
+    //   throw new ErrorResponse(404, "Must provide id_room");
+    // }
     let services= await serviceModel.create(body);
     return res.status(200).json(services);
   },

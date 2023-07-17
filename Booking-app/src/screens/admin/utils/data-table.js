@@ -61,7 +61,7 @@ export const userColumns = [
   // },
 ];
 
-export const homestayColumns = [
+export const roomColumns = [
   {
     field: "id",
     headerName: "ID", 

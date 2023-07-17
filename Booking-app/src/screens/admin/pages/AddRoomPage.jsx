@@ -35,7 +35,7 @@ function a11yProps(index) {
     };
 }
 
-function AddHomeStayPage() {
+function AddRoomPage() {
     const navigate = useNavigate();
     const [tabValue, setTabValue] = useState(0);
 
@@ -49,7 +49,7 @@ function AddHomeStayPage() {
             <div className="add-new__container">
                 <Navbar />
                 <div className='p-2'>
-                    <h2 className='add-new__title'>add homestay</h2>
+                    <h2 className='add-new__title'>add room</h2>
                     <Box mb={2}
                         sx={{
                             backgroundColor: 'gray',
@@ -62,7 +62,7 @@ function AddHomeStayPage() {
                             justifyContent: 'center',
                             cursor: 'pointer'
                         }}
-                        onClick={() => navigate('/admin/homestays')}
+                        onClick={() => navigate('/admin/rooms')}
                     >
                         <ArrowBack />
                     </Box>
@@ -86,4 +86,4 @@ function AddHomeStayPage() {
     )
 }
 
-export default (AddHomeStayPage);
+export default (AddRoomPage);

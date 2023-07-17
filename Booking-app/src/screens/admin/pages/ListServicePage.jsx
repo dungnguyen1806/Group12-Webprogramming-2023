@@ -10,7 +10,7 @@ import CustomModal from '../../../components/custom-modal/CustomModal';
 import serviceApi from '../../../api/serviceApi';
 import { getAllService } from '../../../redux/serviceSlice';
 
-export default function ListHomestayPage() {
+export default function ListRoomPage() {
   const dispatch = useDispatch();
   const { services } = useSelector(state => state.service); 
   const [listService, setListService] = useState([]);
@@ -66,7 +66,7 @@ export default function ListHomestayPage() {
                     >
                       Service Price
                     </TableCell>
-                    <TableCell
+                    {/* <TableCell
                       align='left'
                       sx={{ fontWeight: 600, cursor: 'pointer', minWidth: '130px' }}
                     >
@@ -77,7 +77,7 @@ export default function ListHomestayPage() {
                       sx={{ fontWeight: 600, cursor: 'pointer', minWidth: '120px' }}
                     >
                       Room Price
-                    </TableCell>
+                    </TableCell> */}
                     <TableCell
                       align='left'
                       sx={{ fontWeight: 600, minWidth: '200px' }}
@@ -96,12 +96,12 @@ export default function ListHomestayPage() {
                           {item?.name_service}
                         </TableCell>
                         <TableCell align='left'>${item?.cost}</TableCell>
-                        <TableCell align='left'>
+                        {/* <TableCell align='left'>
                           {item?.id_room ? <span>{item?.id_room?.type_of_room}</span> : <span style={{ color: 'red' }}>No room</span>}
                         </TableCell>
                         <TableCell align='left'>
                           {item?.id_room ? `$${item?.id_room?.cost_per_day}` : '$0'}
-                        </TableCell>
+                        </TableCell> */}
                         <TableCell align='left'>
                           {item?.more_detail}
                         </TableCell>

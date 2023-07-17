@@ -113,7 +113,7 @@ export default function UserSearch(props) {
                                         return (
                                             <SearchItem key={index} item={item} />
                                         )
-                                    }) : <div>There are no homestay!</div>
+                                    }) : <div>There are no room!</div>
                                 }
                             </>
                         }
